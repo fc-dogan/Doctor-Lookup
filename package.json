@@ -1,5 +1,5 @@
 {
-  "name": "memory",
+  "name": "",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,7 +10,7 @@
     "test": "jest"
   },
   "keywords": [],
-  "author": "Michelle, Keturah",
+  "author": "",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.6.4",
