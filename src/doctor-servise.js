@@ -1,16 +1,15 @@
 export class DoctorServise {
-  async searchDoctor(name, medicalIssue) {
+  async searchDoctorByName(name) {
     try {
-      let response = await fetch(`https://api.betterdoctor.com/2016-03-01/doctors?name=${name}&query=${medicalIssue}&location=45.512794%2C%20-122.679565%2C100&user_location=45.512794%2C%20-122.679565&skip=0&limit=10&user_key=${process.env.API_KEY}`);
-      
-      let jsonifiedResponse;
-      
+      let response = await fetch(`https://api.betterdoctor.com/2016-03-01/doctors?name=${name}&location=45.512230%2C-122.658722%2C100&sort=distance-asc&limit=25&user_key=${process.env.API_KEY}`);
+      console.log(response);
+
       if(response.ok && response.status === 200) {
-       jsonifiedResponse = await response.json();
+       let jsonifiedResponse = await response.json();
+       return jsonifiedResponse;
       } else {
-        jsonifiedResponse = false;
-      }
-      return jsonifiedResponse;  
+        throw Error("There was an error processing your request")
+      }  
     }catch (error) {
       return false;
     }
