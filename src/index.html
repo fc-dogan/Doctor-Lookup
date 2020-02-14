@@ -8,12 +8,29 @@
     <h1>Doctor search PDX.</h1>
   </div>
   <div class="container">
-    <h2>Find the perfect doctor to fit your needs</h2>
-    <label for="health-issue"></label>
-    <input type="text" id="health-issue">
-    <label for="doctor-name"></label>
-    <input type="text" name="doctor-name" id="doctor-name">
-    <button class="btn btn-success">Find</button>
+    <form>
+      <h2>Find the perfect doctor to fit your needs in Portland</h2>
+      <div class="form-group">
+        <label for="health-issue">Search by your symptom:</label>
+        <input type="text" id="health-issue" placeholder="(e.g., sore throat)">
+      </div>
+      <div class="form-group">
+        <label for="doctor-name">Search by doctor name:</label>
+        <input type="text" name="doctor-name" id="doctor-name">
+      </div>
+        <button class="btn btn-success">Find</button>
+    </form>
+  </div>
+  <div class="container" id="doctor-list">
+    <table>
+      <thead>
+          <th>Name</th>
+          <th>Title</th>
+          <th>Picture</th>
+      </thead>
+      <tbody>
+        
+
   </div>
   
 </body>

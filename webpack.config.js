@@ -19,7 +19,7 @@ module.exports = {
     new CleanWebpackPlugin(),
     new Dotenv(),
     new HtmlWebpackPlugin({
-      title: 'Journal',
+      title: 'Doctor Lookup',
       template: './src/index.html',
       inject: 'body'
     })
