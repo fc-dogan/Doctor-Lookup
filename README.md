@@ -1,46 +1,66 @@
-# _{Application Name}_
+# _Doctor Lookup_
 
-#### _{Brief description of application}, {Date of current version}_
+#### _Website application that user can receive a list of doctors who can treat their medical issue , 02-14-2020_
 
-#### By _**{List of contributors}**_
+#### By _**Fatma Dogan**_
 
 ## Description
 
-_{This is a detailed description of your application. Its purpose and usage.  Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. }_
+_Website where users may enter a medical issue(ie:"sore throat", "rash", etc.) into a form, submit it, and receive a list of doctors who can treat their medical issue in Portland, OR_
+
+## Specifications
+
+* User enter a medical issue to receive a list of doctors in the Portland area that fit the search query.
+    * __Input:__ sore throat
+    * __Output:__ a list of doctors who can treat sore throat
+* User enter a doctor name to receive a list of doctors in the Portland area that fit the search query.
+    * __Input:__ David
+    * __Output:__ a list of doctors who names David.
+* If the query response includes any doctors, the following information include about each doctor: first name, last name, address, phone number, website and whether or not the doctor is accepting new patients.
+    * __Input:__ David
+    * __Output:__ 
+      * name: David Huberty, MD
+      * address: 19250 SW 65th, Tualatin,OR
+      * phone number: 50365600836
+      * accepts new patients: yes
+* If the API call results in an error, the application returns a notification of what the error is.               
+* If the query response doesn't include any doctors, the application returns a notification that no doctors meet the criteria.
 
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
+* Open your terminal and clone this repository with the following command:
+  * git clone https://github.com/fc-dogan/Doctor-Lookup.git
+* Move into the cloned repository:
+  * cd Doctor-Lookup
 
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this app depends on?}_
+* In the top level of the project's directory, create a hidden file for your API key:
+  * touch .env
 
-## Project Specifications
+* Create an account with BetterDoctor to retrieve your own free API key:
+  * https://developer.betterdoctor.com/
 
-| Behavior   |      Input      |  Output |
-|------------|:---------------:|--------:|
-| | | |
-| | | |
-| | | |
-| | | |
+* Add the API key to your .env file:
+  * API_KEY = YOUR UNIQUE API KEY GOES HEREs
 
-## Known Bugs
+* Add .env to your .gitignore file. 
+````
+    node_modules/
+    dist/
+    .DS_Store
+    .env
+````
+* Install npm
+  * npm install
 
-_{Are there issues that have not yet been resolved that you want to let users know you know?  Outline any issues that would impact use of your application.  Share any workarounds that are in place. }_
-
-## Support and contact details
-
-_{Let people know what to do if they run into any issues or have questions, ideas or concerns.  Encourage them to contact you or make a contribution to the code.}_
 
 ## Technologies Used
 
-_{Tell me about the languages and tools you used to create this app. Assume that I know you probably used HTML and CSS. If you did something really cool using only HTML, point that out.}_
+* HTML
+* CSS
+* Bootsrap
+* JavaScript 
+* jQuery
+* node.js
+* BetterDoctor API
 
-### License
 
-*{Determine the license under which this application can be used.  See below for more details on licensing.}*
-
-Copyright (c) 2016 **_{List of contributors or company name}_**
