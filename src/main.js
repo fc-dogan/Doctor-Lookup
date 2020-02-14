@@ -2,7 +2,7 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
-import { DoctorSevise } from './../src/doctor-servise.js';
+import { DoctorServise } from './../src/doctor-servise.js';
 
 
 
@@ -11,19 +11,19 @@ $(document).ready(function() {
   $('form').submit(function(event){
     event.preventDefault();
 
-    inputtedHealthIssue = $('#health-issue').val();
-    inputtedDoctor = $('#doctor-name').val();
+    let inputtedHealthIssue = $('#health-issue').val();
+    let  inputtedDoctor = $('#doctor-name').val();
 
     (async () => {
-      let doctorServise = new DoctorSevise();
-      const response = await doctorServise.searchDoctor(name,medicalIssue);
-      getElements(response);
-      
+      let doctorServise = new DoctorServise();
+      const response = await doctorServise.searchDoctor(inputtedDoctor, inputtedHealthIssue);
+    //   getElements(response);
+      console.log(response);
     })();
 
-    function getElements(response) {
+    // function getElements(response) {
       
-    }
+    // }
 
   });
 
