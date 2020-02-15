@@ -13,6 +13,7 @@ export class DoctorServise {
       return false;
     }
   }
+  
 
 //   async searchDoctorByIssue(issue) {
 //     try {
