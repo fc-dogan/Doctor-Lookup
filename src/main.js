@@ -10,9 +10,9 @@ $(document).ready(function() {
   $('#dr-form').submit(function(event){
     event.preventDefault();
 
-    // let inputtedHealthIssue = $('#health-issue').val();
+    let inputtedIssue = $('#health-issue').val();
     let  inputtedDoctor = $('#doctor-name').val();
-    $('#doctor-name').val("");
+    // $('#doctor-name').val("");
 
     (async () => {
       let doctorServise = new DoctorServise();
@@ -23,9 +23,22 @@ $(document).ready(function() {
 
      function getElements(response) { 
        response.data.forEach(function(data) {
-         $("#dr-list").append(`<tr><td>${data.profile.first_name} ${data.profile.last_name}</td><td>${data.profile.title}</td></tr>`)
+         $("#dr-list").append(`<tr><td>${data.profile.first_name} ${data.profile.last_name}</td><td>${data.profile.title}</td><td>${data.practices[0].visit_address.street}</td></tr>`)
        })
       
+    }
+
+    (async () => {
+      let doctorServise = new DoctorServise();
+      const responseIssue = await doctorServise.searchDoctorByIssue(inputtedIssue);
+      getElementsByIssue(responseIssue);
+      console.log(responseIssue);
+    })();
+
+    function getElementsByIssue(responseIssue) { 
+      responseIssue.data.forEach(function(data) {
+        $("#dr-list").append(`<tr><td>${data.profile.first_name} ${data.profile.last_name}</td><td>${data.profile.title}</td></tr>`)
+      })
     }
 
   });
