@@ -4,18 +4,15 @@
   <title>Doctor Lookup</title>
 </head>
 <body>
-  <div class="jumbortron">
-    <h1>Doctor search PDX.</h1>
-  </div>
-  <div class="container">
+  <div class="container" id="first-screen">
+    <h1>Find the perfect doctor to fit your needs in <em>Portland</em></h1>
     <form id="dr-form">
-      <h2>Find the perfect doctor to fit your needs in Portland</h2>
       <div class="form-group">
         <label for="health-issue">Search by your symptom:</label>
         <input type="text" id="health-issue" placeholder="(e.g., sore throat)">
       </div>
       <div class="form-group">
-        <label for="doctor-name">Search by doctor name:</label>
+        <label for="doctor-name">Search by Doctor name:</label>
         <input type="text" name="doctor-name" id="doctor-name">
       </div>
         <button class="btn btn-success">Find</button>
@@ -24,9 +21,11 @@
   <div class="container" id="doctor-list">
     <table>
       <thead>
-          <th>Name</th>
-          <th>Title</th>
-          <th>Address</th>
+        <th></th>
+        <th>Doctor Name</th>
+        <th>Title</th>
+        <th>Address</th>
+        <th>Phone number</th>
       </thead>
       <tbody id="dr-list">
 

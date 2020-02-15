@@ -1,3 +1,55 @@
 #doctor-list {
   display: none;
 }
+
+#first-screen {
+  background-color: rgba(226, 241, 241, 0.85);
+  padding: 100px;
+  padding-top: 50px;
+  margin: 150px;
+}
+#doctor-list{
+  background-color: rgba(226, 241, 241, 0.85);
+  padding: 100px;
+  padding-top: 50px;
+  margin: 150px;
+}
+body {
+  text-align: center;
+  background-image: url("./../img/15053.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 150%;
+}
+
+h1 {
+  margin: 50px;
+  font-family: "Arial Black", Gadget, sans-serif;
+  box-shadow: 10px 5px 5px #424a6d;
+}
+
+form {
+  padding: 40px;
+  border-radius: 3px;
+  box-shadow: 10px 5px 5px #424a6d;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+button {
+  width: 150px;
+}
+
+table {
+  width: 100%;
+  text-align: left;
+}
+thead {
+  border: solid;
+  box-shadow: 10px 5px 5px #424a6d;
+  width: 100%;
+}
+
+th, td {
+  padding: 20px;
+  border-bottom: 1px dotted;
+}
