@@ -22,10 +22,15 @@ $(document).ready(function() {
     })();
 
      function getElements(response) { 
-       response.data.forEach(function(data) {
-         $("#dr-list").append(`<tr><td>${data.profile.first_name} ${data.profile.last_name}</td><td>${data.profile.title}</td><td>${data.practices[0].visit_address.street}</td></tr>`)
-       })
-      
+       if(response){
+         if( response.meta.count > 0 ) {
+          response.data.forEach(function(data) {
+            $("#dr-list").append(`<tr><td>${data.profile.first_name} ${data.profile.last_name}</td><td>${data.profile.title}</td><td>${data.practices[0].visit_address.street}</td></tr>`)
+          })
+        } else {
+          $("#dr-list").text(`Sorry, there is no doctor meet your search criteria`)
+        }
+       }
     }
 
     (async () => {
@@ -35,10 +40,12 @@ $(document).ready(function() {
       console.log(responseIssue);
     })();
 
-    function getElementsByIssue(responseIssue) { 
-      responseIssue.data.forEach(function(data) {
-        $("#dr-list").append(`<tr><td>${data.profile.first_name} ${data.profile.last_name}</td><td>${data.profile.title}</td></tr>`)
-      })
+    function getElementsByIssue(responseIssue) {
+      if(responseIssue){  
+        responseIssue.data.forEach(function(data) {
+          $("#dr-list").append(`<tr><td>${data.profile.first_name} ${data.profile.last_name}</td><td>${data.profile.title}</td></tr>`)
+        })
+      } 
     }
 
   });
