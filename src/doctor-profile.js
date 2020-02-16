@@ -6,6 +6,7 @@ export function doctorProfile(data) {
     address: `${data.practices[0].visit_address.street +". "+ data.practices[0].visit_address.city +", " + data.practices[0].visit_address.state}`,
     phone: `${data.practices[0].phones[0].number}`,
   };
+   let website = `${data.practices[0].website}`;
    let acceptsPatient = `${data.practices[0].accepts_new_patients}`;
    let newPatient;
     if ( acceptsPatient !== "true"){
@@ -22,6 +23,7 @@ export function doctorProfile(data) {
    <td>${doctor.title}</td>
    <td>${doctor.address}</td>
    <td>${doctor.phone}</td>
+   <td><a href='${website}'>${website}</a></td>
    <td>${newPatient}</td>
    </tr>`;
 
