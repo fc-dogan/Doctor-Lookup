@@ -26,9 +26,6 @@ _Website where users may enter a medical issue(ie:"sore throat", "rash", etc.) i
 * If the API call results in an error, the application returns a notification of what the error is.               
 * If the query response doesn't include any doctors, the application returns a notification that no doctors meet the criteria.
 
-## View website
-A live version of the site be may be accessed at this [link](https://fc-dogan.github.io/Doctor-Lookup/)
-
 ## Setup/Installation Requirements
 
 * Open your terminal and clone this repository with the following command:
