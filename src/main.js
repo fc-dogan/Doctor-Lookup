@@ -28,7 +28,10 @@ $(document).ready(function() {
     function getElements(response) { 
       if ( !inputtedIssue && !inputtedDoctor) {
           $("#dr-list").append(`<tr><td>Please enter a <a href='index.html'>search</a> value. </td></tr>`)
-      } else if(response){
+      } else  if (typeof(response) == "string"){
+            $("#dr-list").append(`<tr><td>There was an error processing your request. ${response} <br><a href='index.html'> Click here</a> to try again</td></tr>`)
+        
+      }else if(response){
           if ( response.meta.count > 0) {
               response.data.forEach(function(data) {
                 $("#dr-list").append(doctorProfile(data))
@@ -36,9 +39,7 @@ $(document).ready(function() {
           } else {
             $("#dr-list").append(`<tr><td>Sorry, there is no doctor meet your search criteria. <br><a href='index.html'> Click here</a> to try again</td></tr>`)
           }      
-        }else {
-        $("#dr-list").append(`<tr><td>There was an error processing your request. <br><a href='index.html'> Click here</a> to try again</td></tr>`)
-        }
+      }
     }
 
   });
