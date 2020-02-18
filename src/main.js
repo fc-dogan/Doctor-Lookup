@@ -41,30 +41,6 @@ $(document).ready(function() {
         }
     }
 
-
-
-
-
-    //  function getElements(response) { 
-    //    if(response){
-    //      if( response.meta.count > 0) {
-    //       response.data.forEach(function(data) {
-    //         $("#dr-list").append(`<tr>
-    //         <td><img src='${data.profile.image_url}'></td>
-    //         <td>${data.profile.first_name} ${data.profile.last_name}</td>
-    //         <td>${data.profile.title}</td>
-    //         <td>${data.practices[0].visit_address.street +". "+ data.practices[0].visit_address.city +", " + data.practices[0].visit_address.state}</td>
-    //         <td>${data.practices[0].phones[0].number}</td></tr>`)
-    //       })
-    //     } else {
-    //       $("#dr-list").append(`<tr><td>Sorry, there is no doctor meet your search criteria. <br><a href='index.html'> Click here</a> to try again</td></tr>`)
-    //     }
-    //   } else {
-    //     $("#dr-list").append(`<tr><td>There was an error processing your request. <br><a href='index.html'> Click here</a> to try again</td></tr>`)
-    //   }
-    // }
-
-
   });
 
 });
