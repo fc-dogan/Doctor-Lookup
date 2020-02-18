@@ -6,7 +6,13 @@ export function doctorProfile(data) {
     address: `${data.practices[0].visit_address.street +". "+ data.practices[0].visit_address.city +", " + data.practices[0].visit_address.state}`,
     phone: `${data.practices[0].phones[0].number}`,
   };
-   let website = `${data.practices[0].website}`;
+   let website;
+    if(website == null){
+      website = "there is no website";
+    } else{
+      website = `${data.practices[0].website}`;
+    }
+
    let acceptsPatient = `${data.practices[0].accepts_new_patients}`;
    let newPatient;
     if ( acceptsPatient !== "true"){
