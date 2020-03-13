@@ -64,4 +64,8 @@ _Website where users may enter a medical issue(ie:"sore throat", "rash", etc.) i
 * node.js
 * BetterDoctor API
 
+### License
 
+[MIT](https://choosealicense.com/licenses/mit/)
+
+Copyright (c) 2020 **_Fatma Dogan_**
